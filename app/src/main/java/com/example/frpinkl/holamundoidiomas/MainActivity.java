@@ -2,11 +2,13 @@ package com.example.frpinkl.holamundoidiomas;
 
 import android.app.Activity;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -19,12 +21,15 @@ public class MainActivity extends Activity {
 
         if (getResources().getConfiguration().orientation ==
                 Configuration.ORIENTATION_LANDSCAPE) {
-//---vertical mode---
+//---HORIZONTAL mode---
             Toast.makeText(getApplicationContext(), "HORIZONTAL", Toast.LENGTH_SHORT).show();
         } else {
-//---horizontal mode---
+//---VERTICAL mode---
             Toast.makeText(getApplicationContext(), "VERTICAL", Toast.LENGTH_SHORT).show();        }
 
+        ImageView image  = (ImageView) findViewById(R.id.imageView);
+        Resources res = getResources(); /** from an Activity */
+        image.setImageDrawable(res.getDrawable(R.drawable.face));
     }
 
 

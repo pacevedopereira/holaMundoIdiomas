@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 //---HORIZONTAL mode---
             Toast.makeText(getApplicationContext(), "HORIZONTAL", Toast.LENGTH_SHORT).show();
         } else {
-//---VERTICAL mode---
+//---VERTICAL mode------
             Toast.makeText(getApplicationContext(), "VERTICAL", Toast.LENGTH_SHORT).show();        }
 
         ImageView image  = (ImageView) findViewById(R.id.imageView);
